@@ -1,0 +1,279 @@
+<!-- Built with Claude Code + frontend-design skill, in collaboration with designer Douglas Bonneville -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Douglas Bonneville — Designer, Developer, Builder</title>
+    <meta name="description" content="Douglas Bonneville. 30 years building for the web. Now building with Claude Code every day. Warwick, Rhode Island.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --orange: #e37a36;
+            --bg: #0a0a0a;
+            --surface: #141414;
+            --white: #ffffff;
+            --grey-light: #f5f5f5;
+            --grey-mid: #e0e0e0;
+            --grey-text: #888888;
+            --grey-dark: #333333;
+            --border: #1e1e1e;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 300;
+            color: var(--grey-text);
+            background: var(--bg);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: clamp(2.5rem, 8vw, 6rem) clamp(1.5rem, 4vw, 3rem);
+        }
+
+        /* --- Header --- */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .name {
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.02em;
+        }
+
+        .meta {
+            font-size: 0.85rem;
+            color: var(--grey-text);
+        }
+
+        /* --- Hero --- */
+        .hero {
+            margin-top: clamp(3rem, 7vw, 5rem);
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .hero .highlight {
+            color: var(--orange);
+        }
+
+        .sub {
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            color: var(--grey-text);
+        }
+
+        /* --- Divider --- */
+        .divider {
+            border: none;
+            height: 1px;
+            background: var(--border);
+            margin: clamp(2.5rem, 5vw, 4rem) 0;
+        }
+
+        /* --- Section --- */
+        .section-title {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--orange);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: minmax(120px, 180px) 1fr;
+            gap: 0.5rem 1.5rem;
+            align-items: baseline;
+        }
+
+        @media (max-width: 520px) {
+            .row { grid-template-columns: 1fr; gap: 0.15rem; }
+        }
+
+        .row-label {
+            font-weight: 500;
+            color: var(--white);
+            font-size: 0.9rem;
+        }
+
+        .row-label a {
+            color: var(--white);
+            text-decoration: none;
+            border-bottom: 1px solid var(--orange);
+            transition: color 0.2s;
+        }
+
+        .row-label a:hover { color: var(--orange); }
+
+        .row-desc {
+            font-size: 0.9rem;
+            color: var(--grey-text);
+        }
+
+        /* --- Callout --- */
+        .callout {
+            background: var(--surface);
+            border-left: 2px solid var(--orange);
+            padding: 1.25rem 1.5rem;
+            margin-top: 0.25rem;
+        }
+
+        .callout-name {
+            font-weight: 700;
+            color: var(--white);
+            font-size: 1rem;
+        }
+
+        .callout-stat {
+            color: var(--orange);
+            font-weight: 700;
+        }
+
+        .callout-body {
+            margin-top: 0.35rem;
+            font-size: 0.9rem;
+        }
+
+        /* --- Published --- */
+        .pub { margin-bottom: 0.4rem; font-size: 0.9rem; }
+        .pub em { font-style: italic; color: var(--white); font-weight: 500; }
+
+        /* --- Footer --- */
+        .footer {
+            margin-top: clamp(3rem, 6vw, 5rem);
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+        }
+
+        .footer a {
+            color: var(--orange);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="name">Douglas Bonneville</div>
+            <div class="meta">Warwick, RI &middot; Designer &middot; Developer &middot; Builder</div>
+        </header>
+
+        <div class="hero">
+            30 years building for the web.<br>
+            Now I build with <span class="highlight">Claude Code</span>&thinsp;&mdash;&thinsp;every day.
+        </div>
+        <div class="sub">Designer &middot; Developer &middot; Builder &middot; Warwick, Rhode Island</div>
+
+        <hr class="divider">
+
+        <section>
+            <div class="section-title">Built with Claude Code</div>
+            <div class="grid">
+                <div class="row">
+                    <div class="row-label"><a href="https://wannagosee.com">WannaGoSee.com</a></div>
+                    <div class="row-desc">Live music &amp; events discovery for New England. PHP, custom AI scrapers, SEO-first.</div>
+                </div>
+                <div class="row">
+                    <div class="row-label"><a href="https://kidswannago.com">KidsWannaGo.com</a></div>
+                    <div class="row-desc">Family events for Rhode Island &amp; New England. Launched 2025.</div>
+                </div>
+                <div class="row">
+                    <div class="row-label"><a href="https://theboncast.com">TheBonCast.com</a></div>
+                    <div class="row-desc">Daily content pipeline. AI aggregation, automated publishing.</div>
+                </div>
+                <div class="row">
+                    <div class="row-label">DesignTransform</div>
+                    <div class="row-desc">AI-accelerated production for creative agencies. Building now.</div>
+                </div>
+                <div class="row">
+                    <div class="row-label">Ad Matrix</div>
+                    <div class="row-desc">Meta ad creative generation &amp; A/B testing, built in Claude Code.</div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <section>
+            <div class="section-title">Shipped in Rhode Island</div>
+            <div class="callout">
+                <div class="callout-name">The Rhody Weekender</div>
+                <div class="callout-body">Weekly digital events platform. Zero to <span class="callout-stat">22,000 subscribers</span> in 10 months. Concept to exit, 2024&ndash;2025.</div>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <section>
+            <div class="section-title">Before Claude Code</div>
+            <div class="grid">
+                <div class="row">
+                    <div class="row-label">Fidelity Investments</div>
+                    <div class="row-desc">Principal UX Designer &amp; Developer. Two stints (2006&ndash;2013, 2021&ndash;2024). Pyramis $160B &rarr; $1.2T.</div>
+                </div>
+                <div class="row">
+                    <div class="row-label">AOL / Netscape</div>
+                    <div class="row-desc">R&amp;D Manager, Silicon Valley.</div>
+                </div>
+                <div class="row">
+                    <div class="row-label">Cervello / Kearney</div>
+                    <div class="row-desc">100+ UX workshops for Fortune 500 teams.</div>
+                </div>
+                <div class="row">
+                    <div class="row-label">BonFX.com</div>
+                    <div class="row-desc">200+ articles on design, UX, AI. 25 years freelance from Rhode Island.</div>
+                </div>
+                <div class="row">
+                    <div class="row-label">Smashing Magazine</div>
+                    <div class="row-desc">Edited 175+ developer articles, 2010&ndash;2020.</div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <section>
+            <div class="section-title">Published</div>
+            <div class="pub"><em>The Big Book of Font Combinations</em> &mdash; 10,000+ copies sold</div>
+            <div class="pub"><em>UX for Cats: 50+ Illustrated UX Terms</em> &mdash; 2024</div>
+            <div class="pub"><em>Font Combinations</em> &mdash; iOS app</div>
+        </section>
+
+        <footer class="footer">
+            <a href="mailto:me@douglasbonneville.com">me@douglasbonneville.com</a>
+            <a href="/douglas-bonneville-resume-2025.pdf">Resume PDF</a>
+        </footer>
+    </div>
+</body>
+</html>
